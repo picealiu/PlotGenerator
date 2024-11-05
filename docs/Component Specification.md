@@ -1,4 +1,4 @@
-1. Software components.   
+**1. Software components.**   
   a. Data Manager    
     Raw FTIR datasets (in a specified format like CSV or Excel), image files for analysis, and user-defined filters
     (e.g., wavelength ranges, specific peaks).    
@@ -10,7 +10,7 @@
   d. Packages   
     Pandas, Matplotlib, PyImageJ   
 
-2. Interactions to accomplish use cases.   
+**2. Interactions to accomplish use cases.**   
   a. Generating an FTIR Plot   
     The User Interaction Interface prompts the user with a pop-up to:   
     Select an FTIR dataset file.   
@@ -22,10 +22,10 @@
     Select an image file for processing.   
     Choose an image processing filter (e.g., contrast enhancement).   
     Return the processed image or the intensity read based on user's request.   
-3. User Interaction Interface   
+**3. User Interaction Interface**   
   Develop pop-up guides to help users select FTIR data for plotting or choose images and filters for processing.   
   Separate options for FTIR plotting and image processing to streamline user choices.   
-  a. Data Manager   
+  ***a. Data Manager***    
     Implement FTIR data handling, including filtering by wavelength.   
     Set up image loading and basic filter applications (e.g., contrast, change to green) with PyImageJ.   
   b. Visualization Manager   
