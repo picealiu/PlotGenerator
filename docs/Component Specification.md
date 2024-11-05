@@ -22,6 +22,7 @@
     Select an image file for processing.   
     Choose an image processing filter (e.g., contrast enhancement).   
     Return the processed image or the intensity read based on user's request.   
+    
 **3. User Interaction Interface**   
   Develop pop-up guides to help users select FTIR data for plotting or choose images and filters for processing.   
   Separate options for FTIR plotting and image processing to streamline user choices.   
