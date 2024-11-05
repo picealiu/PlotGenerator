@@ -1,4 +1,4 @@
-1. Software components.
+1. Software components.\
   a. Data Manager
     Raw FTIR datasets (in a specified format like CSV or Excel), image files for analysis, and user-defined filters
     (e.g., wavelength ranges, specific peaks).
