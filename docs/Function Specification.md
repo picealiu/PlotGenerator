@@ -15,8 +15,8 @@
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dynamically respond to user input to enable FTIR plot generation and image processing actions.    
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Key steps:    
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Design a user flow to outline how the UI will interact with users, specifying types of questions, such as &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;selecting files or choosing analysis options.     
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Develop a prototype to establish the basic structure of the UI, ensuring it connects with backend functions for FTIR plotting and image analysis.
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;***b. Core Function Development:***
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Develop a prototype to establish the basic structure of the UI, ensuring it connects with backend functions for FTIR plotting and image analysis.      
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;***b. Core Function Development:***      
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Develop functions for FTIR plotting and PyImageJ-based image processing.     
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For FTIR Plotting:    
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create code to import FTIR data, format it appropriately, and visualize it with customizable plot options.    
