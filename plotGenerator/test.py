@@ -4,12 +4,41 @@ import unittest
 from unittest.mock import patch
 import pandas as pd
 import numpy as np
+from plotGenerator import main
 from imageJ_tool import (color_change, batch_process_images,
                          divide_and_measure_intensity,
                          process_images_and_save_intensity, image_processing)
 from utils import (get_user_input, get_directory, get_filename, get_file_path)
 from plot_FTIR import (plot_FTIR, modify_inputs, is_first_column_xaxis,
                        user_input_FTIR)
+
+
+class TestMainFunction(unittest.TestCase):
+
+    @patch('builtins.print')
+    @patch('plotGenerator.get_user_input', side_effect=[1, 2, 3])
+    @patch('plotGenerator.user_input_FTIR')
+    @patch('plotGenerator.image_processing')
+    def test_main(self, mock_image_processing, mock_user_input_FTIR,
+                  mock_get_user_input, mock_print):
+        # Test the main function with mocked user input for options 1, 2,
+        # and then 3 to exit
+        main()
+
+        # Check if FTIR function was called when option 1 was chosen
+        mock_user_input_FTIR.assert_called_once()
+
+        # Check if image processing function was called if option 2 was chosen
+        mock_image_processing.assert_called_once()
+
+        # Verify that the exit option (3) was chosen and loop broke correctly
+        self.assertEqual(mock_get_user_input.call_count, 3)
+
+        # Verify that the print statement was called correctly
+        mock_print.assert_any_call("Welcome to the Image Processer!")
+        mock_print.assert_any_call("\nOptions:\n1. Generate FTIR Plot")
+        mock_print.assert_any_call("2. Use ImageJ")
+        mock_print.assert_any_call("3. Exit.")
 
 
 class TestHelpFunctions(unittest.TestCase):
