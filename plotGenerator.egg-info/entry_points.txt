@@ -1,2 +1,0 @@
-[console_scripts]
-plotGenerator = plotGenerator.main:main
