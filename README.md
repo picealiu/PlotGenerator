@@ -32,7 +32,7 @@ To use this tool, follow these simple steps to set up the environment.
 3. **Run the Tool**: After installation, you can run the tool by typing:
 
     ```sh
-    image_processor
+    plotGenerator
     ```
 
     This command will execute the tool, and you will be presented with an interactive interface.
