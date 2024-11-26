@@ -13,7 +13,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'plotGenerator=plotGenerator:main',
+            'plotGenerator=plotGenerator.main:main',
         ],
     },
     test_suite='test',

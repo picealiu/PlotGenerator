@@ -2,9 +2,9 @@
 # coding: utf-8
 
 # Necessary Packages
-from utils import get_user_input
-from plot_FTIR import user_input_FTIR
-from imageJ_tool import image_processing
+from .utils import get_user_input
+from . import plot_FTIR
+from . import imageJ_tool
 
 
 def main():
@@ -16,13 +16,12 @@ def main():
         print("2. Use ImageJ")
         print("3. Exit.")
 
-        choice = get_user_input("Enter the number of the function "
-                                "you want to use: ", int)
+        choice = get_user_input("Enter the number of function to use: ", int)
 
         if choice == 1:          # FTIR PLOT Function
-            user_input_FTIR()
+            plot_FTIR.user_input_FTIR()
         elif choice == 2:
-            image_processing()  # Image J color change
+            imageJ_tool.image_processing()  # Image J color change
         elif choice == 3:
             break
 
