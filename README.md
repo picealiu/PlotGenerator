@@ -1,8 +1,8 @@
-# Image Processer Tool
+# Plot Generator
 
 ## Overview
 
-The **Image Processer Tool** is an interactive script designed to provide users with functionalities to:
+The **Plot Generator** is an interactive script designed to provide users with functionalities to:
 
 1. Generate FTIR (Fourier-transform infrared spectroscopy) plots.
 2. Use ImageJ for image processing, such as color changes and intensity readings.
