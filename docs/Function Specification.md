@@ -1,28 +1,45 @@
-**1. Who are the users and what do they know?**    
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lab Scientists, non-programmer.    
+# Function Specification
 
-**2. What information users want from the system?**       
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FTIR Plot.    
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Image Process. (with PyImageJ)    
+## Target Users and Their Knowledge
 
-**3. Use cases - how users interact with the system to get the information they want?**     
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Following the interactive interface to generate a plot or possess image as they wish.    
+### 1. Who are the Users?
+- The primary users are **Lab Scientists** who may not have programming experience. The tool is designed to be accessible to non-programmers, enabling them to efficiently process and analyze data.
 
-**4. Preliminary project plan - what you plan to do in what order with the most detail on the next 2 weeks.**      
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;***a. User Interface Development:***     
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create an interactive UI framework that will:      
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Display pop-up questions guiding users step-by-step through tasks.      
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dynamically respond to user input to enable FTIR plot generation and image processing actions.    
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Key steps:    
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Design a user flow to outline how the UI will interact with users, specifying types of questions, such as selecting files or choosing analysis options.     
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Develop a prototype to establish the basic structure of the UI, ensuring it connects with backend functions for FTIR plotting and image analysis.      
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;***b. Core Function Development:***      
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Develop functions for FTIR plotting and PyImageJ-based image processing.     
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For FTIR Plotting:    
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create code to import FTIR data, format it appropriately, and visualize it with customizable plot options.    
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For Image Processing with PyImageJ:    
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Establish basic image processing workflows like cropping, filtering, and enhancing images.    
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;***c. Testing and Feedback Collection:***    
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Run tests using a sample dataset and images to ensure functionality and user-friendliness.    
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gather feedback to adjust question flow, UI interactions, and any required refinements for ease of use.    
+### 2. User Information Requirements
+- Users need to obtain **FTIR Plots** for their datasets.
+- Users also want to perform **Image Processing** (using PyImageJ) to analyze images, apply filters, or enhance image quality.
 
+## User Interaction Scenarios
+
+### 1. How Users Interact with the System
+- Users interact with the system through a simple and guided **interactive interface**.
+- They can choose to **generate an FTIR plot** or **process an image** by following on-screen prompts and selecting relevant files or options.
+- The interface is designed to help users achieve their goals without requiring any coding knowledge.
+
+## Project Plan
+
+### 1. Preliminary Project Plan
+This section outlines the development plan, focusing on the tasks to be completed in the upcoming weeks, with an emphasis on building a user-friendly interface and core functionalities.
+
+#### **a. User Interface Development**
+- **Objective**: Create an interactive user interface that guides users through the system.
+- **Tasks**:
+  - Develop a UI framework that will display **pop-up questions** to guide users step-by-step through tasks.
+  - **Dynamic Responses**: Make the interface respond dynamically to user inputs, enabling actions like FTIR plot generation and image processing.
+  - **Key Steps**:
+    - Design the **user flow** to outline the interaction process, specifying the types of prompts, such as selecting files or choosing analysis options.
+    - Create a **prototype** of the UI to establish the basic structure and ensure it interacts smoothly with backend functionalities for FTIR plotting and image processing.
+
+#### **b. Core Function Development**
+- **Objective**: Build the core functionality for FTIR plotting and image processing.
+- **Tasks**:
+  - **FTIR Plotting**:
+    - Develop code to **import FTIR data**, format it appropriately, and generate customizable plots for visualization.
+  - **Image Processing (PyImageJ)**:
+    - Implement basic image processing workflows such as **cropping**, **filtering**, and **enhancing images** using PyImageJ.
+
+#### **c. Testing and Feedback Collection**
+- **Objective**: Ensure that the system functions as expected and is user-friendly.
+- **Tasks**:
+  - Conduct tests using **sample datasets and images** to verify functionality and identify any issues.
+  - Gather **user feedback** to improve the UI, adjust the flow of questions, and make necessary refinements for better ease of use.
