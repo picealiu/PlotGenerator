@@ -1,4 +1,4 @@
-# Image Processor Tool
+# Image Processor
 
 ## Overview
 
