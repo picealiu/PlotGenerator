@@ -1,10 +1,13 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='plotGenerator',
+    name='imageProcessor',
     version='1.0',
-    packages=find_packages(),
     include_package_data=True,
+    author='PiceaLiu',
+    license="MIT", 
+    url='https://github.com/picealiu/PlotGenerator.git',
+    packages=find_packages(),
     install_requires=[
         'numpy',
         'pandas',
@@ -16,6 +19,11 @@ setup(
             'plotGenerator=plotGenerator.main:main',
         ],
     },
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
     test_suite='test',
     python_requires='>=3.7, <4',
 )
