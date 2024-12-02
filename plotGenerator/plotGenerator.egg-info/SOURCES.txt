@@ -1,7 +1,0 @@
-setup.py
-plotGenerator.egg-info/PKG-INFO
-plotGenerator.egg-info/SOURCES.txt
-plotGenerator.egg-info/dependency_links.txt
-plotGenerator.egg-info/entry_points.txt
-plotGenerator.egg-info/requires.txt
-plotGenerator.egg-info/top_level.txt
