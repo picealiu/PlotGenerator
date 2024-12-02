@@ -22,7 +22,6 @@
 ### 4. Required Packages
 - `pandas`: Data handling and manipulation.
 - `matplotlib`: Data visualization for FTIR plotting.
-- `PyImageJ`: Image processing and analysis.
 - `numpy`, `os`, `sys`, `cv2`: Various tasks for numerical operations, file handling, and image processing.
 
 ## Interactions to Accomplish Use Cases
