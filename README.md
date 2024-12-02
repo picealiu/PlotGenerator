@@ -15,6 +15,28 @@ The tool guides users through each step and provides an easy way to interactivel
 - **Generate FTIR Plot**: Users can input FTIR data to generate a plot for visualization purposes.
 - **ImageJ Integration**: Perform image processing, including color adjustments, intensity analysis, and other modifications.
 
+To use this tool, follow the steps below:
+
+## Install Python
+
+Ensure Python is installed on your system.
+
+### For Windows:
+1. Download Python from the [official Python website](https://www.python.org/).
+2. Run the installer and check **Add Python to PATH** during installation.
+3. Open the terminal by searching for "Command Prompt" in the Start menu.
+
+### For macOS:
+1. Open Terminal (`Cmd + Space`, type `Terminal`, and press Enter).
+2. Install Homebrew if not already installed:
+    ```sh
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    ```
+3. Install Python using Homebrew:
+    ```sh
+    brew install python
+    ```
+
 ## Setup and Installation
 
 To use this tool, follow these simple steps to set up the environment.
