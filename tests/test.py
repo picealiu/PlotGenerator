@@ -4,13 +4,17 @@ import unittest
 from unittest.mock import patch
 import pandas as pd
 import numpy as np
+from io import StringIO
 from plotGenerator import main
 from plotGenerator.imageJ_tool import (color_change, batch_process_images,
-                         divide_and_measure_intensity,
-                         process_images_and_save_intensity, image_processing)
-from plotGenerator.utils import (get_user_input, get_directory, get_filename, get_file_path)
-from plotGenerator.plot_FTIR import (plot_FTIR, modify_inputs, is_first_column_xaxis,
-                       user_input_FTIR)
+                                       divide_and_measure_intensity,
+                                       process_images_and_save_intensity,
+                                       image_processing)
+from plotGenerator.utils import (get_user_input, get_directory, get_filename,
+                                 get_file_path)
+from plotGenerator.plot_FTIR import (plot_FTIR, modify_inputs,
+                                     is_first_column_xaxis,
+                                     user_input_FTIR, get_valid_smooth_level)
 
 
 class TestMainFunction(unittest.TestCase):
@@ -150,6 +154,23 @@ class TestFTIRProcessing(unittest.TestCase):
         result = is_first_column_xaxis(dataPath)
 
         self.assertTrue(result)
+
+    @patch('pandas.read_excel')
+    @patch('builtins.input', side_effect=['-1', '500', '5'])
+    def test_get_valid_smooth_level(self, mock_input, mock_read_excel):
+        # Mock the Excel data with 100 rows
+        excel_data = StringIO("""xaxis,data1,data2
+        1,10,20
+        2,15,25
+        3,20,30
+        ...
+        100,50,60
+        """)
+        df = pd.read_csv(excel_data)
+        mock_read_excel.return_value = df
+        data_path = "fake_path.xlsx"
+        valid_smooth_level = get_valid_smooth_level(data_path)
+        self.assertEqual(valid_smooth_level, 5)
 
     @patch("builtins.input", side_effect=[
         "test_data.xlsx",  # File path

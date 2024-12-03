@@ -79,8 +79,7 @@ def modify_inputs(dataPath: str, smoothLevel: int, title: str):
             dataPath = get_file_path("Enter the new full path to the data file"
                                      " (Excel format): ")
         elif choice == "2":
-            smoothLevel = get_user_input("Enter the smooth level (integer):",
-                                         int)
+            smoothLevel = get_valid_smooth_level(dataPath)
         elif choice == "3":
             title = get_user_input("Enter the new title of the figure: ")
         elif choice == "4":
@@ -113,6 +112,38 @@ def is_first_column_xaxis(dataPath: str):
         return False
 
 
+def get_valid_smooth_level(dataPath: str):
+    """
+    Prompts the user to input a smoothing level and validates it
+    against the number of rows in the dataset.
+
+    Args:
+        dataPath (str): The path to the Excel data file.
+
+    Returns:
+        int: A valid smoothing level.
+    """
+    # Read the Excel file to get the number of rows
+    try:
+        df = pd.read_excel(dataPath)
+        num_rows = df.shape[0]  # Total number of rows in the dataset
+    except Exception as e:
+        print(f"Error reading the Excel file: {e}")
+        sys.exit(1)
+
+    while True:
+        try:
+            # Prompt the user for the smoothing level
+            inputw = f"Enter the smoothing level (0 to {num_rows}): "
+            smoothLevel = int(input(inputw).strip())
+            if 0 <= smoothLevel <= num_rows:
+                return smoothLevel
+            else:
+                print(f"Invalid input! Integer between 0 and {num_rows}.")
+        except ValueError:
+            print("Invalid input! Please enter an integer.")
+
+
 def user_input_FTIR(dataPath: str = None, smoothLevel: int = None,
                     title: str = None):
     """
@@ -137,7 +168,7 @@ def user_input_FTIR(dataPath: str = None, smoothLevel: int = None,
         prompt_sentence = "Enter full path to the data file (Excel format):"
         dataPath = get_file_path(prompt_sentence)
     if not smoothLevel:
-        smoothLevel = get_user_input("Enter the smooth level (integer): ", int)
+        smoothLevel = get_valid_smooth_level(dataPath)
     if not title:
         title = get_user_input("Enter the title of the figure: ")
 
