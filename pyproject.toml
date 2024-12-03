@@ -1,5 +1,5 @@
 [project]
-name='imageProcessor',
+name='PlotGenerator',
     version='1.0',
     include_package_data=True,
     author='PiceaLiu',
