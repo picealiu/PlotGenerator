@@ -5,11 +5,11 @@ from unittest.mock import patch
 import pandas as pd
 import numpy as np
 from plotGenerator import main
-from imageJ_tool import (color_change, batch_process_images,
+from plotGenerator.imageJ_tool import (color_change, batch_process_images,
                          divide_and_measure_intensity,
                          process_images_and_save_intensity, image_processing)
-from utils import (get_user_input, get_directory, get_filename, get_file_path)
-from plot_FTIR import (plot_FTIR, modify_inputs, is_first_column_xaxis,
+from plotGenerator.utils import (get_user_input, get_directory, get_filename, get_file_path)
+from plotGenerator.plot_FTIR import (plot_FTIR, modify_inputs, is_first_column_xaxis,
                        user_input_FTIR)
 
 

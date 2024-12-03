@@ -1,11 +1,11 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='imageProcessor',
+    name='plotGenerator_PL',
     version='1.0',
     include_package_data=True,
     author='PiceaLiu',
-    license="MIT", 
+    license="MIT",
     url='https://github.com/picealiu/PlotGenerator.git',
     packages=find_packages(),
     install_requires=[
