@@ -44,11 +44,11 @@ To use this tool, follow these simple steps to set up the environment.
 1. **Clone or Download the Repository**: First, clone or download the repository containing this script.
 
 2. **Install the Package**: After cloning, navigate to the project directory
-   
+
     ```sh
     cd path/to/folder/contains/setup.py
     ```
-    
+
    Run the following command to install the tool along with all required dependencies:
 
     ```sh
@@ -60,7 +60,7 @@ To use this tool, follow these simple steps to set up the environment.
 4. **Run the Tool**: After installation, you can run the tool by typing:
 
     ```sh
-    imageProcessor
+    plotGeneratorPL
     ```
 
     This command will execute the tool, and you will be presented with an interactive interface.
