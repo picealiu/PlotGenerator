@@ -1,5 +1,5 @@
 [project]
-name = "plotGenerator_PL"
+name = "plotGeneratorPL"
 version = "1.0"
 description = "A package for processing and plotting images"
 authors = [{name = "PiceaLiu"}]
@@ -19,7 +19,7 @@ classifiers = [
 ]
 
 [project.scripts]
-plotGenerator = "plotGenerator.main:main"  # Entry point for the console script
+plotGeneratorPL = "plotGenerator.main:main"  # Entry point for the console script
 
 [build-system]
 requires = ["setuptools>=61.0", "wheel"]

@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='plotGenerator_PL',
+    name='plotGeneratorPL',
     version='1.0',
     include_package_data=True,
     author='PiceaLiu',
