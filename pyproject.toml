@@ -2,7 +2,7 @@
 name = "plotGeneratorPL"
 version = "1.0"
 description = "A package for processing and plotting images"
-authors = [{name = "PiceaLiu"}]
+authors = [{name = "PiceaLiu", email = "picealiu@uw.edu"}]
 readme = "README.md"
 license = {text = "MIT"}  # Correctly formatted license
 requires-python = ">=3.7, <4"  # Correct field for Python version requirements
@@ -18,9 +18,12 @@ classifiers = [
     "Operating System :: OS Independent"
 ]
 
+[tool.setuptools.packages.find]
+where = ["src"]
+
 [project.scripts]
-plotGeneratorPL = "plotGenerator.main:main"  # Entry point for the console script
+plotGeneratorPL = "plotGeneratorPL.main:main"  # Entry point for the console script
 
 [build-system]
-requires = ["setuptools>=61.0", "wheel"]
+requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
