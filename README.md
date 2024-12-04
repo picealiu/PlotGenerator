@@ -15,72 +15,57 @@ The tool guides users through each step and provides an easy way to interactivel
 - **Generate FTIR Plot**: Users can input FTIR data to generate a plot for visualization purposes.
 - **ImageJ Integration**: Perform image processing, including color adjustments, intensity analysis, and other modifications.
 
-To use this tool, follow the steps below:
-
-## Install Python
-
-Ensure Python is installed on your system.
-
-### For Windows:
-1. Download Python from the [official Python website](https://www.python.org/).
-2. Run the installer and check **Add Python to PATH** during installation.
-3. Open the terminal by searching for "Command Prompt" in the Start menu.
-
-### For macOS:
-1. Open Terminal (`Cmd + Space`, type `Terminal`, and press Enter).
-2. Install Homebrew if not already installed:
-    ```sh
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    ```
-3. Install Python using Homebrew:
-    ```sh
-    brew install python
-    ```
-
 ## Setup and Installation
 
 To use this tool, follow these simple steps to set up the environment.
 
-1. **Clone or Download the Repository**: First, clone or download the repository containing this script.
+### Install the Package
 
-2. **Install the Package**: After cloning, navigate to the project directory
+To install the tool and all required dependencies, use the following command:
 
-    ```sh
-    cd path/to/folder/contains/setup.py
-    ```
+```sh
+pip install plotGeneratorPL
+```
 
-   Run the following command to install the tool along with all required dependencies:
+### Running the Tool
 
-    ```sh
-    python setup.py install
-    ```
+You have two options to run the package:
 
-    This will automatically install all the required dependencies, including `numpy`, `pandas`, `matplotlib`, `opencv-python`, and other necessary packages.
+1. **In Terminal**:
+    - After installing, you can execute the tool directly from the terminal by running:
 
-4. **Run the Tool**: After installation, you can run the tool by typing:
+      ```sh
+      plotGeneratorPL
+      ```
 
-    ```sh
-    plotGeneratorPL
-    ```
+      This will provide you with an interactive interface to use the available features.
 
-    This command will execute the tool, and you will be presented with an interactive interface.
+2. **In a Python Notebook**:
+    - You can also import and use the main functionality within a Python notebook:
 
-## How to Use
+      ```python
+      from plotGeneratorPL import main
+      main.main()
+      ```
+
+### How to Use
 
 1. **Interact with the Program**:
-   - When prompted, you will see the following options:
-     1. Generate FTIR Plot.
-     2. Use ImageJ for image processing.
-     3. Exit the program.
-   - Enter the corresponding number to select the desired function.
+    - When prompted, you will see the following options:
+      ```
+      1. Generate FTIR Plot
+      2. Use ImageJ for image processing
+      3. Exit the program
+      ```
+    - Enter the corresponding number to select the desired function.
 
 2. **Follow the Prompts**: The program will guide you through the process of providing data or selecting image files as needed.
 
-## Example Usage
+### Example Usage
 
 After running the tool, you may be prompted as follows:
 
-```
+```plaintext
 Welcome to the Image Processor!
 
 Options:
@@ -88,19 +73,4 @@ Options:
 2. Use ImageJ
 3. Exit
 Enter the number of the function you want to use:
-```
-
-Enter the number corresponding to the desired action, and the script will guide you through the rest of the steps.
-
-## License
-
-This project is licensed under the MIT License.
-
-## Contribution
-
-If you would like to contribute to this project, feel free to create a pull request or submit an issue.
-
-## Contact
-
-For any questions or issues, please contact picealiu@uw.edu.
 
