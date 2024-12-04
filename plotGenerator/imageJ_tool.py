@@ -5,6 +5,15 @@ import pandas as pd
 from .utils import (get_user_input, get_directory, get_filename)
 
 
+__all__ = [
+    "color_change",
+    "batch_process_images",
+    "divide_and_measure_intensity",
+    "process_images_and_save_intensity",
+    "image_processing"
+    ]
+
+
 def color_change(input_path: str, output_path: str, color: str,
                  threshold: int = 150):
     """
@@ -188,7 +197,7 @@ def image_processing():
         # Get intensity measurements and save to Excel
         output_excel = "Enter file name to save results (e.g., results.xlsx): "
         output_excel = get_filename(output_excel)
-        saveDir = get_directory("Enter the directory to save the figure: ")
+        saveDir = get_directory("Enter the directory to save the file: ")
         savePath = os.path.join(saveDir, output_excel)
         # Confirm action
         print("\nSummary of Inputs:")
